@@ -37,3 +37,29 @@ Yes of course! You are the owner of the OpenAI API Key, you can definitely use t
 4. [Drizzle - DB ORM](https://orm.drizzle.team/)
 5. [Turso - DB](https://turso.tech/)
 5. [Zod - Validation](https://zod.dev/)
+
+## How can I use the generated component in my project?
+
+1. Make sure you're running Vue3(Nuxi)
+2. [Setup typescript in your project](https://nuxt.com/docs/guide/concepts/typescript)
+3. [Install and init Shadcn-vue](https://www.shadcn-vue.com/docs/installation/nuxt.html)
+4. Add this property and replace the paths to the ones you selected in your `tsconfig.json`
+```
+{
+    ...
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/lib/utils": [
+                "./lib/utils",
+            ],
+            "@/components/*": [
+                "./components/*",
+            ]
+        }
+    }
+    ...
+}
+```
+5. `npm install lucide-vue-next`
+Done! Now you can add your components via `npx shadcn-vue@latest add <component>`
