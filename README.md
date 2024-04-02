@@ -28,8 +28,9 @@ We would love to have your contributions! All PRs all welcomed! We need help bui
 
 1. Clone the repo
 2. Run `pnpm i`
-3. Run `pnpm dev` to run Nuxt3
-4. Open `http://localhost:3000`
+3. Create a .env file based off .env.example, NUXT_PUBLIC_DISABLE_LOGIN=true might be interesting if you don't want to github auth.
+4. Run `pnpm dev` to run Nuxt3
+5. Open `http://localhost:3000`
 
 ## Credits
 
