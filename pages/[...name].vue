@@ -2,7 +2,7 @@
 const route = useRoute()
 const name = computed(() => route.params.name)
 
-const { data } = await useFetch<DBComponent[]>(`/api/component/user/${name.value}`)
+const { data } = await useFetch<DBComponent[]>(`/api/component/user/${name.value.toString()}`)
 const dataUser = computed(() => data.value?.at(-1)?.user)
 
 if (!data.value?.length) {

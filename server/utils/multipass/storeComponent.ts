@@ -12,14 +12,21 @@ export default async (event: H3Event<EventHandlerRequest>, id: string, slug?: st
   const componentDesignTask = event.node.req.componentDesignTask
   const componentGeneratedCode = event.node.req.componentGeneratedCode
 
-  const result = await useDB().update(tables.components).set({
-    slug,
-    code: componentGeneratedCode,
-    description: componentDesignTask.description.user,
-    metadata: componentDesignTask,
-    completed: true,
-    error: null,
-  }).where(eq(tables.components.id, id)).returning().get()
+  const result = await useDB()
+    .update(tables.components)
+    .set({
+      slug,
+      code: componentGeneratedCode,
+      description: componentDesignTask.description.user,
+      metadata: componentDesignTask,
+      completed: true,
+      error: null,
+    })
+    .where(eq(tables.components.id, id))
+    .returning()
+    .get({
+      id: tables.components.id,
+    })
 
   await screenshot(result.id)
 

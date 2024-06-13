@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   // @ts-expect-error fetch latest components
     .select({
       ...components,
-      user: users,
+      // user: users,
     })
     .from(components)
     .leftJoin(users, eq(components.userId, users.id))

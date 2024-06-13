@@ -28,7 +28,7 @@ const { loading, contentCode, onDone, onStream, onError, isNewPrompt, handleInit
 
 const sfcString = computed(() => selectedVersion.value?.code ?? contentCode.value ?? '')
 const isGenerationStucked = computed(() => {
-  if (selectedVersion.value?.completed || loading.value)
+  if (!selectedVersion.value || selectedVersion.value?.completed || loading.value)
     return false
   if (selectedVersion.value?.error)
     return true
@@ -97,6 +97,7 @@ onDone(() => {
 })
 
 onMounted(() => {
+  console.log(data.value)
   if (isNewPrompt.value && data.value?.length === 1) {
     // need not to handleInit as it will be done on the landing page
     handleCreate({

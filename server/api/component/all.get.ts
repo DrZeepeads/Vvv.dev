@@ -7,7 +7,6 @@ export default defineEventHandler(async (_event) => {
     .select({
       ...components,
       user: users,
-      value: max(components.createdAt),
     })
     .from(components)
     .leftJoin(users, eq(components.userId, users.id))

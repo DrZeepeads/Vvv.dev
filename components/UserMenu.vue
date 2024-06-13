@@ -10,7 +10,7 @@ const { loggedIn, user, clear } = useUserSession()
     <UiDropdownMenuTrigger as-child>
       <UiButton class="relative flex-shrink-0 rounded-full" size="icon" variant="secondary">
         <div class=" rounded-full overflow-hidden">
-          <Menu v-if="!loggedIn" class="p-1" />
+          <Menu v-if="!loggedIn || !user" class="p-1" />
           <img v-else-if="user.avatar_url" :src="user.avatar_url" class="w-full h-full">
         </div>
 

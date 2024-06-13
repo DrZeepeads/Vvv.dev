@@ -9,7 +9,7 @@ const chromeExecutables = {
 export async function screenshot(id: string) {
   const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 
-  const url = IS_PRODUCTION ? `${useRuntimeConfig().public.siteUrl}/s/${id}` : `http://localhost:3000/s/${id}`
+  const url = `${useRuntimeConfig().public.siteUrl}/s/${id}`
   const browserlessApiKey = useRuntimeConfig().browserlessApiKey
 
   const getBrowser = () =>

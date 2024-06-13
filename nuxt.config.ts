@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // devtools totally broken, not sure why
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg', href: '/logo.svg' }],
@@ -32,8 +32,11 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     '@nuxtseo/module',
     '@nuxt/content',
-    // "@nuxthub/core"
+    '@nuxthub/core',
   ],
+  hub: {
+    database: true,
+  },
   extends: ['nuxt-umami'],
   appConfig: {
     umami: {
@@ -60,13 +63,6 @@ export default defineNuxtConfig({
       if (isClient)
       // @ts-expect-error it has alias of vue
         config.resolve.alias.vue = 'vue/dist/vue.esm-bundler.js'
-    },
-  },
-  nitro: {
-    vercel: {
-      functions: {
-        maxDuration: 300, // 5mins maximum possible for Vercel Pro
-      },
     },
   },
   googleFonts: {
