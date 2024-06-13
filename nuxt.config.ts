@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxtjs/google-fonts',
     'nuxt-auth-utils',
-    '@nuxtseo/module',
+    '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxthub/core',
   ],
