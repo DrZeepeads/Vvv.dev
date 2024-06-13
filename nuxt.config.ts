@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxtjs/google-fonts',
     'nuxt-auth-utils',
-    '@nuxtjs/seo',
+    // '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxthub/core',
   ],
@@ -50,14 +50,13 @@ export default defineNuxtConfig({
   tailwindcss: {
     viewer: false,
   },
-  ogImage: {
-    debug: true,
-    compatibility: {
-      prerender: {
-        chromium: false,
-      },
-    },
-  },
+  // ogImage: {
+  //   compatibility: {
+  //     prerender: {
+  //       chromium: false,
+  //     },
+  //   },
+  // },
   hooks: {
     'vite:extendConfig': (config, { isClient }) => {
       if (isClient)
