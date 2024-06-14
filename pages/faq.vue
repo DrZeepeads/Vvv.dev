@@ -1,8 +1,8 @@
 <script setup lang="ts">
-// useSeoMeta({
-//   title: 'FAQs',
-//   description: 'Get answers to common questions about vue0, the generative UI tool.',
-// })
+useSeoMeta({
+  title: 'FAQs',
+  description: 'Get answers to common questions about vue0, the generative UI tool.',
+})
 </script>
 
 <template>
