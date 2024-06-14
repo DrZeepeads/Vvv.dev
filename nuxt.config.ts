@@ -10,18 +10,18 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: '',
-      umamiHost: '',
-      umamiId: '',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+      umamiHost: process.env.NUXT_PUBLIC_UMAMI_HOST,
+      umamiId: process.env.NUXT_PUBLIC_UMAMI_ID,
     },
-    browserlessApiKey: '',
+    browserlessApiKey: process.env.NUXT_BROWSERLESS_API_KEY,
     github: {
-      clientId: '',
-      clientSecret: '',
+      clientId: process.env.NUXT_OAUTH_GITHUB_CLIENT_ID,
+      clientSecret: process.env.NUXT_OAUTH_GITHUB_CLIENT_SECRET,
     },
     session: {
       name: 'nuxt-session',
-      password: '',
+      password: process.env.NUXT_SESSION_PASSWORD,
     },
   },
   modules: [

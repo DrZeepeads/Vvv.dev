@@ -61,9 +61,9 @@ function saveOpenaiKey() {
   openSetupOpenAiDialog.value = false
 }
 
-useSeoMeta({
-  ogImage: `${useRuntimeConfig().public.siteUrl}/og.png`,
-})
+// useSeoMeta({
+//   ogImage: `${useRuntimeConfig().public.siteUrl}/og.png`,
+// })
 </script>
 
 <template>
