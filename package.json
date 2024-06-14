@@ -39,7 +39,6 @@
     "js-tiktoken": "^1.0.12",
     "lucide-vue-next": "^0.301.0",
     "nuxt-umami": "^2.6.2",
-    "openai": "^4.51.0",
     "radix-vue": "^1.8.3",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
