@@ -28,8 +28,6 @@ export default async (event: H3Event<EventHandlerRequest>, id: string, slug?: st
       id: tables.components.id,
     })
 
-  await screenshot(result.id)
-
   console.dir(result)
   return result
 }
